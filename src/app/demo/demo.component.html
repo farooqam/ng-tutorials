@@ -1,0 +1,15 @@
+<h2>Async Pipe and Share Demo</h2>
+<div *ngIf="user | async; let user; else loading">
+  <h2>{{user.firstName}} {{user.lastName}}</h2>
+   <dl>
+     <dt>Age:</dt>
+     <dd>{{user.age}}</dd>
+     <dt>Height:</dt>
+     <dd>{{user.height}}</dd>
+     <dt>Weight:</dt>
+     <dd>{{user.weight}}</dd>
+     <dt>Hometown</dt>
+     <dd>{{user.homeTown}}</dd>
+   </dl>
+</div>
+<ng-template #loading>Loading user data...</ng-template>
